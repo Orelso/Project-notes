@@ -2,8 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Notes from './pages/Notes'
 import Create from './pages/Create'
 import { createTheme, ThemeProvider } from "@mui/material";
-import { purple } from '@mui/material/colors';
-import { fontWeight } from '@mui/system';
+import { green, purple } from '@mui/material/colors';
 
 
 const theme = createTheme ({
@@ -11,7 +10,7 @@ const theme = createTheme ({
         primary: {
             main: '#3A5343'
         },
-        secondary: purple
+        secondary: green
     },
     typography: {
       fontFamily: 'Quicksand',

@@ -20,9 +20,21 @@
     },
     {
       "title": "ewfe",
-      "details": "fwewe",
+      "details": "fewfew",
       "category": "work",
       "id": 4
+    },
+    {
+      "title": "wfe",
+      "details": "fgwe",
+      "category": "money",
+      "id": 5
+    },
+    {
+      "title": "gre",
+      "details": "ger",
+      "category": "todos",
+      "id": 6
     }
   ]
 }

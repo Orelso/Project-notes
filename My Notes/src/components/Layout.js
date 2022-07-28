@@ -10,8 +10,10 @@ import { AddCircleOutlineOutlined, SubjectOutlined } from '@mui/icons-material'
 import { useHistory, useLocation } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
+import { format } from 'date-fns'
 
-const drawerWidth = 165
+
+const drawerWidth = 240 // 500 - subtract this number from 
 
 const useStyles = makeStyles((theme) => {
     return{
@@ -32,13 +34,11 @@ const useStyles = makeStyles((theme) => {
     active: {
         background: '#E5E4E2'
     },
-    title:{
-        padding: theme.spacing(13),
-        alignItems: 'center'
-    },
-    appbar: {
-        width: `calc(100% - ${drawerWidth}px)`
-    }
+    // title:{
+    //     padding: theme.spacing(13),
+    //     alignItems: 'center'
+    // },
+    
 }})
 
 export default function Layout({ children }) {
@@ -61,15 +61,6 @@ export default function Layout({ children }) {
 
   return (
     <div className={classes.root}>
-        {/* app bar */}
-        <AppBar className={classes.appbar}>
-            <Toolbar>
-                <Typography>
-                    Welcome Blood
-                </Typography>
-            </Toolbar>
-        </AppBar>
-
         {/* side drawer */}
         <Drawer
         className={classes.drawer}
@@ -78,8 +69,7 @@ export default function Layout({ children }) {
         classes={{ paper: classes.drawerPaper}}
         >
             <div>
-                <Typography variant="h5" sx={{textAlign: 'center'}}
->
+                <Typography variant="h5" sx={{textAlign: 'center'}}>
                     My Notes
                 </Typography>
             </div>
@@ -99,6 +89,7 @@ export default function Layout({ children }) {
 
 
         <div className={classes.page}>
+            <div className={classes.toolbar}></div>
             {children}
         </div>
     </div>

@@ -11,6 +11,12 @@ const useStyles = makeStyles({
     test: {
         border: (note) => {
             if (note.category == 'work') {
+                return '2px solid blue'
+            } else if (note.category == 'money') {
+                return '2px solid green'
+            } else if (note.category == "todos") {
+                return '2px solid yellow'
+            }else if (note.category == 'reminders') {
                 return '2px solid red'
             }
         }

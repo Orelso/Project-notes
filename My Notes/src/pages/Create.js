@@ -63,14 +63,14 @@ export default function Create() {
   return (
     <Container>
       <Typography className={classes.title} variant="h6" component='h2' gutterBottom align='center'>
-        Create a New Note
+        Remaining to be done
       </Typography>
 
       <form noValidate autoComplete='off' onSubmit={handleSubmit}>
         <TextField
           onChange={(e)=> setTitle(e.target.value)} // 101
           sx={{marginTop: 3, marginBottom: 2, display: 'block'}}
-          label="Note Title"
+          label="Project Title"
           variant='outlined'
           color='secondary'
           fullWidth // makes form the length of page
@@ -94,10 +94,10 @@ export default function Create() {
         <FormControl sx={{marginTop: 3, marginBottom: 2, display: 'block'}}>
           <FormLabel>Note Category</FormLabel>
           <RadioGroup row value={category} onChange={(e) => setCategory(e.target.value)} /* allows for other values to be selected */>
-          <FormControlLabel value='money'control={<Radio />} label='Money' />
-          <FormControlLabel value='todos'control={<Radio />} label='To Do' />
-          <FormControlLabel value='reminders'control={<Radio />} label='Reminders' />
-          <FormControlLabel value='work'control={<Radio />} label='Work' />
+          <FormControlLabel value='money'control={<Radio />} label='HTML/CSS' />
+          <FormControlLabel value='todos'control={<Radio />} label='Javascript' />
+          <FormControlLabel value='reminders'control={<Radio />} label='Javascript/React' />
+          <FormControlLabel value='work'control={<Radio />} label='MUI' />
           </RadioGroup>
         </FormControl>
 

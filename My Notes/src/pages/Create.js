@@ -10,6 +10,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { useHistory } from 'react-router-dom';
+import { pink } from '@mui/material/colors';
 
 
 
@@ -32,8 +33,11 @@ export default function Create() {
   const history = useHistory() // 105
   const [title, setTitle] = useState('') // 101
   const [details, setDetails] = useState('') // 102
+  const [details2, setDetails2] = useState('') 
   const [titleError, setTitleError] = useState(false) // 103
   const [detailsError, setDetailsError] = useState(false) // 104
+  const [detailsError2, setDetailsError2] = useState(false) // 104
+
   const [category, setCategory] = useState('todos')
 
   const handleSubmit = (e) => {
@@ -41,6 +45,7 @@ export default function Create() {
 
     setTitleError(false) // 103 sets the textfields back to false 
     setDetailsError(false) // 104 sets the textfields back to false
+    setDetailsError2(false)
 
     if (title == '') { // if the title is equal to an empty string then error is true
       setTitleError(true) // 103
@@ -50,6 +55,11 @@ export default function Create() {
       setDetailsError(true) //104
     }
 
+    if (details2 == '') { // if the detail is equal to an empty string then error is true
+      setDetailsError2(true) //104
+    }
+
+
     if (title && details) {
       fetch('http://localhost:8000/notes', {
         method: 'POST',
@@ -57,6 +67,14 @@ export default function Create() {
         body: JSON.stringify({ title, details, category })
       }).then(() => history.push('/')) // 105
     }
+
+  //   if (title && details ) {
+  //     fetch('http://localhost:8000/notes', {
+  //       method: 'POST',
+  //       headers: {"Content-type": "application/json"},
+  //       body: JSON.stringify({ title, details, details2, category })
+  //     }).then(() => history.push('/')) // 105
+  //   }
   }
 
 
@@ -91,13 +109,27 @@ export default function Create() {
           >
         </TextField>
 
+        <TextField
+          onChange={(e)=> setDetails2(e.target.value)} // 102
+          sx={{marginTop: 3, marginBottom: 2, display: 'block'}}
+          label="Details"
+          variant='outlined'
+          color='secondary'
+          multiline // several lines
+          rows={1} // with 4 rows
+          fullWidth // makes form the length of page
+          required // adds astrik
+          error={detailsError2}
+          >
+        </TextField>
+
         <FormControl sx={{marginTop: 3, marginBottom: 2, display: 'block'}}>
           <FormLabel>Note Category</FormLabel>
           <RadioGroup row value={category} onChange={(e) => setCategory(e.target.value)} /* allows for other values to be selected */>
-          <FormControlLabel value='money'control={<Radio />} label='HTML/CSS' />
-          <FormControlLabel value='todos'control={<Radio />} label='Javascript' />
-          <FormControlLabel value='reminders'control={<Radio />} label='Javascript/React' />
-          <FormControlLabel value='work'control={<Radio />} label='MUI' />
+          <FormControlLabel value='HTML/CSS'control={<Radio />} label='HTML/CSS' />
+          <FormControlLabel value='Javascript'control={<Radio />} label='Javascript' />
+          <FormControlLabel value='Javascript/React'control={<Radio />} label='Javascript/React' />
+          <FormControlLabel value='MUI'control={<Radio />} label='MUI' />
           </RadioGroup>
         </FormControl>
 

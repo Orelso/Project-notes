@@ -1,34 +1,30 @@
 {
   "notes": [
     {
-      "title": "Yoshi's birthday bash",
-      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "category": "reminders",
-      "id": 1
-    },
-    {
-      "title": "Complete my ninja training",
-      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
-      "category": "work",
-      "id": 2
-    },
-    {
-      "title": "Order a pizza!",
-      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "category": "todos",
+      "title": "Portfolio",
+      "details": "+ add new projects \n+ change the theme of the page",
+      "category": "HTML/CSS",
       "id": 3
     },
     {
-      "title": "Work more",
-      "details": "Do it ",
-      "category": "todos",
-      "id": 4
+      "title": "Notes",
+      "details": "+ Change it to a project building tracker\n+ add checkboxes for different tasks\n+ Change colors and theme",
+      "category": "MUI",
+      "id": 5
     },
     {
-      "title": "ur6t",
-      "details": "rtrt",
-      "category": "work",
-      "id": 5
+      "title": "jty",
+      "details": "jghj",
+      "details2": "kty",
+      "category": "Javascript",
+      "id": 12
+    },
+    {
+      "title": "dsfsd",
+      "details": "dsvsd",
+      "details2": "fe",
+      "category": "Javascript/React",
+      "id": 14
     }
   ]
 }

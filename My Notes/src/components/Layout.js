@@ -11,6 +11,7 @@ import { useHistory, useLocation } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import { format } from 'date-fns'
+import { red } from '@mui/material/colors'
 
 
 const drawerWidth = 240 // 500 - subtract this number from 
@@ -48,12 +49,12 @@ export default function Layout({ children }) {
 
     const menuItems = [
         {
-            text: 'My Notes',
+            text: 'My Projects',
             icon: <SubjectOutlined color="secondary" />,
             path: '/'
         },
         {
-            text: 'Create Note',
+            text: 'Create Project',
             icon: <AddCircleOutlineOutlined color="secondary" />,
             path: '/create'
         }
@@ -70,7 +71,7 @@ export default function Layout({ children }) {
         >
             <div>
                 <Typography variant="h5" sx={{textAlign: 'center'}}>
-                    My Notes
+                    Projects
                 </Typography>
             </div>
 

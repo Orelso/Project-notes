@@ -2,29 +2,30 @@
   "notes": [
     {
       "title": "Portfolio",
-      "details": "+ add new projects \n+ change the theme of the page",
+      "details": "Add new projects ",
+      "details2": "Change the theme of the page",
+      "details3": "Make it useable on the phone",
+      "details4": ":)",
       "category": "HTML/CSS",
-      "id": 3
+      "id": 4
     },
     {
-      "title": "Notes",
-      "details": "+ Change it to a project building tracker\n+ add checkboxes for different tasks\n+ Change colors and theme",
-      "category": "MUI",
+      "title": "Maukas dad website",
+      "details": "Barebones",
+      "details2": "5 pages",
+      "details3": "",
+      "details4": "",
+      "category": "HTML/CSS",
       "id": 5
     },
     {
-      "title": "jty",
-      "details": "jghj",
-      "details2": "kty",
-      "category": "Javascript",
-      "id": 12
-    },
-    {
-      "title": "dsfsd",
-      "details": "dsvsd",
-      "details2": "fe",
-      "category": "Javascript/React",
-      "id": 14
+      "title": "Notes",
+      "details": "Only add checkbox when needed.",
+      "details2": "Search bar for finding notes",
+      "details3": "Saving checked boxes on refresh",
+      "details4": "",
+      "category": "MUI",
+      "id": 6
     }
   ]
 }

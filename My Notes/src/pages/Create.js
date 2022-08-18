@@ -34,9 +34,16 @@ export default function Create() {
   const [title, setTitle] = useState('') // 101
   const [details, setDetails] = useState('') // 102
   const [details2, setDetails2] = useState('') 
+  const [details3, setDetails3] = useState('') 
+
+  const [details4, setDetails4] = useState('') 
+
   const [titleError, setTitleError] = useState(false) // 103
   const [detailsError, setDetailsError] = useState(false) // 104
-  const [detailsError2, setDetailsError2] = useState(false) // 104
+  // const [detailsError2, setDetailsError2] = useState(false) // 104
+  // const [detailsError3, setDetailsError3] = useState(false) // 104
+  // const [detailsError4, setDetailsError4] = useState(false) // 104
+
 
   const [category, setCategory] = useState('todos')
 
@@ -45,7 +52,6 @@ export default function Create() {
 
     setTitleError(false) // 103 sets the textfields back to false 
     setDetailsError(false) // 104 sets the textfields back to false
-    setDetailsError2(false)
 
     if (title == '') { // if the title is equal to an empty string then error is true
       setTitleError(true) // 103
@@ -55,16 +61,24 @@ export default function Create() {
       setDetailsError(true) //104
     }
 
-    if (details2 == '') { // if the detail is equal to an empty string then error is true
-      setDetailsError2(true) //104
-    }
+    // if (details2 == '') { // if the detail is equal to an empty string then error is true
+    //   setDetailsError2(true) //104
+    // }
+
+    // if (details3 == '') { // if the detail is equal to an empty string then error is true
+    //   setDetailsError2(true) //104
+    // }
+
+    // if (details4 == '') { // if the detail is equal to an empty string then error is true
+    //   setDetailsError2(true) //104
+    // }
 
 
     if (title && details) {
       fetch('http://localhost:8000/notes', {
         method: 'POST',
         headers: {"Content-type": "application/json"},
-        body: JSON.stringify({ title, details, category })
+        body: JSON.stringify({ title, details,details2, details3, details4, category })
       }).then(() => history.push('/')) // 105
     }
 
@@ -81,7 +95,7 @@ export default function Create() {
   return (
     <Container>
       <Typography className={classes.title} variant="h6" component='h2' gutterBottom align='center'>
-        Remaining to be done
+        To be done
       </Typography>
 
       <form noValidate autoComplete='off' onSubmit={handleSubmit}>
@@ -102,7 +116,7 @@ export default function Create() {
           variant='outlined'
           color='secondary'
           multiline // several lines
-          rows={4} // with 4 rows
+          rows={3} // with 4 rows
           fullWidth // makes form the length of page
           required // adds astrik
           error={detailsError}
@@ -119,7 +133,30 @@ export default function Create() {
           rows={1} // with 4 rows
           fullWidth // makes form the length of page
           required // adds astrik
-          error={detailsError2}
+          >
+        </TextField>
+        <TextField
+          onChange={(e)=> setDetails3(e.target.value)} // 102
+          sx={{marginTop: 3, marginBottom: 2, display: 'block'}}
+          label="Details"
+          variant='outlined'
+          color='secondary'
+          multiline // several lines
+          rows={1} // with 4 rows
+          fullWidth // makes form the length of page
+          r
+          >
+        </TextField>
+        <TextField
+          onChange={(e)=> setDetails4(e.target.value)} // 102
+          sx={{marginTop: 3, marginBottom: 2, display: 'block'}}
+          label="Details"
+          variant='outlined'
+          color='secondary'
+          multiline // several lines
+          rows={1} // with 4 rows
+          fullWidth // makes form the length of page
+          
           >
         </TextField>
 
@@ -130,6 +167,7 @@ export default function Create() {
           <FormControlLabel value='Javascript'control={<Radio />} label='Javascript' />
           <FormControlLabel value='Javascript/React'control={<Radio />} label='Javascript/React' />
           <FormControlLabel value='MUI'control={<Radio />} label='MUI' />
+          
           </RadioGroup>
         </FormControl>
 

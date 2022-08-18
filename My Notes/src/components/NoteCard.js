@@ -38,6 +38,8 @@ const useStyles = makeStyles({
 
 export default function NoteCard({ note, handleDelete }) {
     const classes = useStyles(note)
+
+    
     return (
         <div>
             <Card elevation={10} className={classes.test}>
@@ -51,10 +53,11 @@ export default function NoteCard({ note, handleDelete }) {
                     subheader={<span style={{fontFamily: "Courier New", color: "#000000"}}>{note.category}</span>}                    />
                 <CardContent>
                     <FormGroup>
-                    <FormControlLabel sx={{color: '#000000'}} control={<Checkbox color="warning" defaultChecked />} label={note.details} />
+                    <FormControlLabel sx={{color: '#000000'}} control={<Checkbox color="warning"  />} label={note.details} />
                     <FormControlLabel sx={{color: '#555555'}} control={<Checkbox  />} label={note.details2} />
-                    <FormControlLabel sx={{color: '#000000'}} control={<Checkbox disabledRipple />} label={note.details2} />
-                    
+                    <FormControlLabel sx={{color: '#000000'}} control={<Checkbox  />} label={note.details3} />
+                    <FormControlLabel sx={{color: '#000000'}} control={<Checkbox  />} label={note.details4} />
+
                     </FormGroup>
                 </CardContent>
             </Card>

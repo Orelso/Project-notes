@@ -38,9 +38,9 @@ let notes = [
   }
 ]
 
-app.get('/', (req, res) => {
-  res.send('<h1>Hello World!</h1>')
-})
+// app.get('/', (req, res) => {
+//   res.send('<h1>Hello World!</h1>')
+// })
 
 app.get('/notes', (req, res) => {
   res.json(notes)
@@ -100,7 +100,7 @@ app.post('/notes', (request, response) => {
 //   response.end(JSON.stringify(notes))
 // })
 
-const port = 3001
-app.listen(port)
-console.log(`Server running on port ${port}`)
-
+const PORT = process.env.PORT || 3001
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
+})

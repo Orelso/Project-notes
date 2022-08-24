@@ -4,7 +4,7 @@
   "description": "",
   "main": "indexx.js",
   "scripts": {
-    "start": "node backend/index.js",
+    "start": "node backend/indexx.js",
     "watch": "nodemon backend/indexx.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

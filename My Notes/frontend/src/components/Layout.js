@@ -77,9 +77,9 @@ export default function Layout({ children }) {
 
        {/* List / Links */}
        <List>
-        {menuItems.map(item => (
-            <div className={location.pathname == item.path ? classes.active : null}>
-            <ListItem key={item.text} button onClick={() => history.push(item.path)}>
+        {menuItems.map((item, index) => (
+            <div key={index + item.text} className={location.pathname == item.path ? classes.active : null}>
+            <ListItem  button onClick={() => history.push(item.path)}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.text} />
             </ListItem>

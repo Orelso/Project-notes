@@ -1,0 +1,58 @@
+{
+  "notes": [
+    {
+      "title": "Portfolio",
+      "details": "Add new projects ",
+      "details2": "Change the theme of the page",
+      "details3": "Make it useable on the phone",
+      "details4": ":)",
+      "category": "HTML/CSS",
+      "id": 4
+    },
+    {
+      "title": "Maukas dad website",
+      "details": "Barebones",
+      "details2": "5 pages",
+      "details3": "",
+      "details4": "",
+      "category": "HTML/CSS",
+      "id": 5
+    },
+    {
+      "title": "Notes",
+      "details": "Only add checkbox when needed.",
+      "details2": "Search bar for finding notes",
+      "details3": "Saving checked boxes on refresh",
+      "details4": "",
+      "category": "MUI",
+      "id": 6
+    },
+    {
+      "title": "h5h5",
+      "details": "eh5h5",
+      "details2": "h545",
+      "details3": "54y45",
+      "details4": "y45y5y",
+      "category": "Javascript",
+      "id": 7
+    },
+    {
+      "title": "wqd",
+      "details": "dqwd",
+      "details2": "wqd",
+      "details3": "dwq",
+      "details4": "qw",
+      "category": "HTML/CSS",
+      "id": 8
+    },
+    {
+      "title": "hr5",
+      "details": "hrt",
+      "details2": "hrt",
+      "details3": "",
+      "details4": "",
+      "category": "Javascript",
+      "id": 9
+    }
+  ]
+}
